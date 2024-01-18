@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(221, 221, 221);
+  background-color: white;
+  height: 80px;
+  padding: 0 90px 0 90px;
+}
+
+img {
+  padding: 0.5rem;
+}
