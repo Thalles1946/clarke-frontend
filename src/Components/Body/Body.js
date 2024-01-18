@@ -68,7 +68,7 @@ const Body = () => {
               color: "black",
             }}
           >
-            Próximo Passo
+            Consultar
           </Button>
         </form>
       </Card>
