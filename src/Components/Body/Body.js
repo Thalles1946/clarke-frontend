@@ -13,8 +13,9 @@ const Body = () => {
         <Typography
           variant="h3"
           sx={{
-            fontSize: "2rem",
+            fontSize: "2.6rem",
             fontWeight: 700,
+            fontSize: "2rem",
             color: "white",
             textAlign: "left",
           }}
