@@ -46,7 +46,7 @@ const Body = () => {
             }}
           >
             <label style={{ marginBottom: "0.4rem" }}>
-              Qual o seu consuma mensal de energia? (Em kWh)
+              Qual o seu consumo mensal de energia? (Em kWh)
             </label>
             <TextField
               style={{ borderRadius: "20rem" }}
