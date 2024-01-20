@@ -91,10 +91,11 @@ const Body = () => {
           sx={{
             color: "white",
             textAlign: "left",
+            marginTop: "1rem",
           }}
         >
-          Se o seu negócio gasta mais de R$ 10 mil por mês com energia, a Clarke
-          pode te ajudar a economizar com o Mercado Livre de Energia.
+          Preenchendo o formulário ao lado, será possivel identificar as
+          empresas parceiras que atendem a sua necessidade de consumo.
         </Typography>
       </div>
       <Card
@@ -151,7 +152,7 @@ const Body = () => {
             overflowY: "scroll",
           }}
         >
-          {createOptions()}
+          {response && response.length > 0 ? createOptions() : null}
           <Button
             sx={{
               borderRadius: "4rem",
