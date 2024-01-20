@@ -1,7 +1,28 @@
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import {
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+  gql,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+
+const accessToken = "IKpPlCY5uVmy6qolmN1Pk5RG";
+
+const httpLink = createHttpLink({
+  uri: "https://clarke-api-azure.vercel.app/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  return {
+    headers: {
+      ...headers,
+      authorization: accessToken ? `Bearer ${accessToken}` : "",
+    },
+  };
+});
 
 const client = new ApolloClient({
-  uri: "http://127.0.0.1:5000/graphql",
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
